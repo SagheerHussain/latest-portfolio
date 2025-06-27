@@ -1,10 +1,9 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WhatsAppButton = ({ bgColor = "#25D366" }) => {
+const WhatsAppButton = () => {
   const phoneNumber = "+923313908443";
   const message = "Hello! I want to know more about your services.";
-
   const encodedMessage = encodeURIComponent(message);
 
   const handleClick = () => {
@@ -18,20 +17,9 @@ const WhatsAppButton = ({ bgColor = "#25D366" }) => {
   return (
     <button
       onClick={handleClick}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "5px",
-        backgroundColor: bgColor,
-        color: "white",
-        padding: "12px 20px",
-        border: "none",
-        borderRadius: "8px",
-        fontSize: "16px",
-        cursor: "pointer",
-      }}
+      className="flex items-center px-4 py-2 md:px-6 md:py-3 rounded-xl bg-green-500 text-white shadow-glass hover:bg-glass transition duration-300 text-sm md:text-base whitespace-nowrap"
     >
-      <FaWhatsapp size={20} />
+      <FaWhatsapp className="mr-2" size={18} />
       Chat on WhatsApp
     </button>
   );
